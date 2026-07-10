@@ -1,0 +1,15 @@
+﻿.agents/
+.codex/
+index.broken-*.html
+index.before-relink-*.html
+Thumbs.db
+.DS_Store
+?遢/
+# Large local media files should stay outside GitHub.
+*.mp4
+!phone-begin-video.mp4
+!new-intro.mp4
+!short-intro.mp4
+*.mov
+*.webm
+*.m4v
