@@ -872,7 +872,7 @@
 <body>
 
 <div id="stage">
-  <video id="introVideo" src="new-intro.mp4" data-desktop-src="new-intro.mp4" data-mobile-src="new-intro.mp4" playsinline preload="auto"></video>
+  <video id="introVideo" src="https://pub-9e0ba794b0534118b338ddf089a59398.r2.dev/new-intro.mp4" data-desktop-src="https://pub-9e0ba794b0534118b338ddf089a59398.r2.dev/new-intro.mp4" data-mobile-src="https://pub-9e0ba794b0534118b338ddf089a59398.r2.dev/new-intro.mp4" playsinline preload="auto"></video>
   <canvas id="lastFrameCanvas" aria-hidden="true"></canvas>
   <div id="vignette"></div>
   <div id="introBuffering" aria-hidden="true">
@@ -1110,8 +1110,8 @@
 
   function setIntroVideoSource(){
     const nextSrc = window.matchMedia('(max-width: 720px) and (pointer: coarse)').matches
-      ? (video.dataset.mobileSrc || video.dataset.desktopSrc || video.getAttribute('src') || 'new-intro.mp4')
-      : (video.dataset.desktopSrc || video.getAttribute('src') || 'new-intro.mp4');
+      ? (video.dataset.mobileSrc || video.dataset.desktopSrc || video.getAttribute('src') || 'https://pub-9e0ba794b0534118b338ddf089a59398.r2.dev/new-intro.mp4')
+      : (video.dataset.desktopSrc || video.getAttribute('src') || 'https://pub-9e0ba794b0534118b338ddf089a59398.r2.dev/new-intro.mp4');
     if(video.getAttribute('src') !== nextSrc){
       video.src = nextSrc;
       video.load();
