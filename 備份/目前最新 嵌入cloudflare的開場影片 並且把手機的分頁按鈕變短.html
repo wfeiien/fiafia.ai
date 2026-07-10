@@ -1559,7 +1559,7 @@
   function getYouTubeEmbedUrl(url){
     const idMatch = url.match(/(?:youtu\.be\/|youtube\.com\/(?:shorts\/|watch\?v=))([^?&=]+)/i);
     if(!idMatch) return '';
-    return `https://www.youtube.com/embed/${idMatch[1]}?autoplay=1&playsinline=1&rel=0&modestbranding=1&enablejsapi=1`;
+    return `https://www.youtube.com/embed/${idMatch[1]}?autoplay=1&rel=0&modestbranding=1`;
   }
 
   function openYouTubeModal(url){
@@ -1575,7 +1575,7 @@
     mediaPrev.style.display = 'none';
     mediaNext.style.display = 'none';
     mediaCounter.textContent = '';
-    mediaModalStage.innerHTML = `<iframe src="${embedUrl}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    mediaModalStage.innerHTML = `<iframe src="${embedUrl}" title="YouTube video player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
     mediaModal.classList.add('show');
     mediaModal.setAttribute('aria-hidden', 'false');
   }
